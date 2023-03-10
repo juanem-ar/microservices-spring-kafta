@@ -18,7 +18,7 @@ public class ReservationEventsService {
 
     private final KafkaTemplate<String, ReservationEvent<?>> producer;
 
-    @Value("${topic.customer.name:reservations}")
+    @Value("${topic.reservation.name:reservations}")
     private String topicReservation;
 
     public void publish(Reservation reservation) {
